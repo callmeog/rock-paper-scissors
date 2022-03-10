@@ -9,20 +9,20 @@ function    computerPlay()  {
 
 function    playRound(playerSelection,  computerSelection)  {
     if(playerSelection  === 'rock') {
-        console.log("You won, rock beats scissors");
         playerScore++
+        console.log("You won, rock beats scissors");
     }else if(playerSelection === 'paper') {
         console.log('It\'s a draw, nobody wins');
     }else if(playerSelection === 'scissors') {
-        console.log('You lose computer won');
         computerScore++
+        console.log('You lose computer won');
     }else if (computerSelection === 'paper') {
         console.log('It\'s a draw, nobody wins')
     }else if(computerSelection === 'rock') {
-        console.log('Computer lose, rock beats scissors')
         playerScore++
+        console.log('Computer lose, rock beats scissors')
     }else if(computerSelection === 'scissors') {
-        computerScore
+        computerScore++
         console.log('Computer won, you lose')
     }else {
         ''
@@ -35,7 +35,7 @@ const   computerSelection   =   computerPlay();
 
 function    game()  {
     for(let i = 0; i < 5; i++)    {
-        playRound();
+        playRound(playerSelection,  computerSelection);
     }
     if(playerScore > computerScore) {
         alert('Congrats, you won the game')
