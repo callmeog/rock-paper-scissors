@@ -30,12 +30,12 @@ function    playRound(playerSelection,  computerSelection)  {
 
 }
 
-const   playerSelection     =   prompt('Player turn');
+const   playerSelection     =   prompt('Play game');
 const   computerSelection   =   computerPlay();
 
 function    game()  {
     for(let i = 0; i < 5; i++)    {
-        playRound(playerSelection,  computerSelection);
+        playRound(prompt('Play game'),  computerSelection);
     }
     if(playerScore > computerScore) {
         alert('Congrats, you won the game')
