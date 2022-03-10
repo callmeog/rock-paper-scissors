@@ -1,6 +1,6 @@
 const   computerGameSelection   =   ['Rock',    'Paper',    'Scissors'];
-let playerScore = 1;
-let computerScore = 1;
+let playerScore = 0;
+let computerScore = 0;
 function    computerPlay()  {
     return  computerGameSelection[Math.floor(Math.random()  *   computerGameSelection.length)];
 }
@@ -8,25 +8,8 @@ function    computerPlay()  {
 
 
 function    playRound(playerSelection,  computerSelection)  {
-    if(playerSelection  === 'rock') {
-        playerScore++
-        console.log("You won, rock beats scissors");
-    }else if(playerSelection === 'paper') {
-        console.log('It\'s a draw');
-    }else if(playerSelection === 'scissors') {
-        computerScore++
-        console.log('You lose computer won');
-    }else if (computerSelection === 'paper') {
-        console.log('It\'s a draw')
-    }else if(computerSelection === 'rock') {
-        playerScore++
-        console.log('Computer lose, rock beats scissors')
-    }else if(computerSelection === 'scissors') {
-        computerScore++
-        console.log('Computer won, scissors beats paper')
-    }else {
-        ''
-    }
+    if(playerSelection  === computerSelection) {
+      
 
 }
 
