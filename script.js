@@ -13,8 +13,6 @@ function    playRound(playerSelection,  computerSelection)  {
 
 }
 
-const   playerSelection     =   prompt('Play game');
-const   computerSelection   =   computerPlay();
 
 function    game()  {
     for(let i = 0; i < 5; i++)    {
