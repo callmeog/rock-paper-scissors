@@ -16,14 +16,14 @@ function    playRound(playerSelection,  computerSelection)  {
 
 //    if(rock.test(playerSelection)) {
         switch (true) {
-            case computerSelection == 'rock':
+            case computerSelection == 'paper':
                 playerScore++
-                console.log(`computer: ${computerSelection}`);
+                console.log(`computer: ${computerSelection} `);
                 break;
             
-            case computerSelection == 'paper':
+            case computerSelection == 'rock':
                 computerScore++
-                console.log(`computer: ${computerSelection}`);
+                console.log(`computer: ${computerSelection} `);
                 break;
 
             case computerSelection == 'scissors':
@@ -32,13 +32,13 @@ function    playRound(playerSelection,  computerSelection)  {
         }
      
         switch (true) {
-            case playerSelection == 'paper':
+            case playerSelection == 'rock':
             playerScore++
             console.log(`player: ${playerSelection}`);
             break;
 
-            case playerSelection == 'rock':
-                computerScore++
+            case playerSelection == 'paper':
+                playerScore++
                 console.log(`player: ${playerSelection}`);
                 break;
             
@@ -47,11 +47,6 @@ function    playRound(playerSelection,  computerSelection)  {
                 break;
         }
 
-        switch (true) {
-            case computerSelection == 'scissors':
-                computerScore++
-                console.log(`computer: ${computerSelection}`);
-        }
     }
 //}
 
@@ -64,7 +59,7 @@ function    game()  {
     if(playerScore > computerScore) {
         alert('Congrats, you won the game')
     }else if(playerScore < computerScore) {
-        alert('Sorry, computer won')
+        alert(`Sorry, computer won`)
     }else {
         alert('Draw  nobody won')
     }
