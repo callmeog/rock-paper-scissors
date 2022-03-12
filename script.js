@@ -18,7 +18,7 @@ function    playRound(playerSelection,  computerSelection)  {
         switch (true) {
             case computerSelection == 'rock':
                 computerScore++
-                console.log('Rock');
+                console.log(`computer ${computerSelection}`);
                 break;
             
             case computerSelection == 'paper':
