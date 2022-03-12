@@ -27,8 +27,8 @@ function    playRound(playerSelection,  computerSelection)  {
                 break;
 
             case computerSelection == 'scissors':
-                playerScore++
-                console.log(`computer: ${computerSelection}`)
+                console.log(`computer: ${computerSelection}`);
+                break
         }
      
         switch (true) {
@@ -45,6 +45,12 @@ function    playRound(playerSelection,  computerSelection)  {
             case playerSelection == 'scissors':
                 console.log(`player: ${playerSelection}`);
                 break;
+        }
+
+        switch (true) {
+            case computerSelection == 'scissors':
+                computerScore++
+                console.log(`computer: ${computerSelection}`);
         }
     }
 //}
