@@ -22,27 +22,27 @@ function    playRound(playerSelection,  computerSelection)  {
                 break;
             
             case computerSelection == 'paper':
-                console.log('Paper');
+                console.log();
                 break;
 
             case computerSelection == 'scissors':
                 playerScore++
-                console.log('Scissors')
+                console.log()
         }
      
         switch (true) {
             case playerSelection == 'paper':
             playerScore++
-            console.log('Paper ');
+            console.log();
             break;
 
             case playerSelection == 'rock':
-                console.log('Rock');
+                console.log();
                 break;
             
             case playerSelection == 'scissors':
             computerScore++
-                console.log('Scissors');
+                console.log();
                 break;
         }
     }
