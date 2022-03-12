@@ -18,16 +18,16 @@ function    playRound(playerSelection,  computerSelection)  {
         switch (true) {
             case computerSelection == 'rock':
                 computerScore++
-                console.log(`computer ${computerSelection}`);
+                console.log(`computer: ${computerSelection}`);
                 break;
             
             case computerSelection == 'paper':
-                console.log();
+                console.log(`computer: ${computerSelection}`);
                 break;
 
             case computerSelection == 'scissors':
                 playerScore++
-                console.log()
+                console.log(`computer: ${computerSelection}`)
         }
      
         switch (true) {
