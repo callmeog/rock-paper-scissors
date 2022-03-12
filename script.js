@@ -1,4 +1,4 @@
-const   computerGameSelection   =   ['Rock',    'Paper',    'Scissors'];
+const   computerGameSelection   =   ['rock',    'paper',    'scissors'];
 let playerScore = 0;
 let computerScore = 0;
 function    computerPlay()  {
@@ -16,28 +16,44 @@ function    playRound(playerSelection,  computerSelection)  {
 
 //    if(rock.test(playerSelection)) {
         switch (true) {
-            case playerSelection == 'rock':
+            case computerSelection == 'rock':
                 computerScore++
-                console.log('rock beat scissors');
+                console.log('Computer won, rock beat scissors');
                 break;
             
             case computerSelection == 'paper':
-                computerScore++
-                console.log('scissors beat paper');
+                console.log('Draw, paper beats rock');
                 break;
 
             case computerSelection == 'scissors':
                 playerScore++
-                console.log('scissors beat paper')
+                console.log('rock beats scissors')
         }
-    }
+     
+        switch (true) {
+            case playerSelection == 'paper':
+            playerScore++
+            console.log('paper beats rock, draw');
+            break;
 
+            case playerSelection == 'rock':
+                console.log('Draw, paper beats rock');
+                break;
+            
+            case playerSelection == 'scissors':
+            computerScore++
+                console.log('scissors beats paper');
+                break;
+        }
+
+        
+    }
 //}
 
 
 
 function    game()  {
-    for(let i = 0; i < 1; i++)    {
+    for(let i = 0; i < 5; i++)    {
         playRound(prompt('Play game'), computerPlay());
     }
     if(playerScore > computerScore) {
@@ -45,7 +61,7 @@ function    game()  {
     }else if(playerScore < computerScore) {
         alert('Sorry computer won')
     }else {
-        alert('Its a draw')
+        alert('Its a draw,  nobody won')
     }
 }
 game()
