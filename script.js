@@ -33,16 +33,16 @@ function    playRound(playerSelection,  computerSelection)  {
         switch (true) {
             case playerSelection == 'paper':
             playerScore++
-            console.log();
+            console.log(`player: ${playerSelection}`);
             break;
 
             case playerSelection == 'rock':
-                console.log();
+                console.log(`player: ${playerSelection}`);
                 break;
             
             case playerSelection == 'scissors':
             computerScore++
-                console.log();
+                console.log(`player: ${playerSelection}`);
                 break;
         }
     }
