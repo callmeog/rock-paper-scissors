@@ -18,16 +18,16 @@ function    playRound(playerSelection,  computerSelection)  {
         switch (true) {
             case computerSelection == 'rock':
                 computerScore++
-                console.log('Computer won, rock beat scissors');
+                console.log('Rock');
                 break;
             
             case computerSelection == 'paper':
-                console.log('Draw, paper beats rock');
+                console.log('Paper');
                 break;
 
             case computerSelection == 'scissors':
                 playerScore++
-                console.log('rock beats scissors')
+                console.log('Scissors')
         }
      
         switch (true) {
@@ -46,7 +46,7 @@ function    playRound(playerSelection,  computerSelection)  {
                 break;
         }
 
-        
+
     }
 //}
 
