@@ -17,11 +17,12 @@ function    playRound(playerSelection,  computerSelection)  {
 //    if(rock.test(playerSelection)) {
         switch (true) {
             case computerSelection == 'rock':
-                computerScore++
+                playerScore++
                 console.log(`computer: ${computerSelection}`);
                 break;
             
             case computerSelection == 'paper':
+                computerScore++
                 console.log(`computer: ${computerSelection}`);
                 break;
 
@@ -37,11 +38,11 @@ function    playRound(playerSelection,  computerSelection)  {
             break;
 
             case playerSelection == 'rock':
+                computerScore++
                 console.log(`player: ${playerSelection}`);
                 break;
             
             case playerSelection == 'scissors':
-            computerScore++
                 console.log(`player: ${playerSelection}`);
                 break;
         }
@@ -57,9 +58,9 @@ function    game()  {
     if(playerScore > computerScore) {
         alert('Congrats, you won the game')
     }else if(playerScore < computerScore) {
-        alert('Sorry computer won')
+        alert('Sorry, computer won')
     }else {
-        alert('Its a draw,  nobody won')
+        alert('Draw  nobody won')
     }
 }
 game()
