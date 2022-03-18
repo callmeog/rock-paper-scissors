@@ -1,6 +1,6 @@
 const   computerGameSelection   =   ['rock',    'paper',    'scissors'];
-let playerScore = 0;
-let computerScore = 0;
+const playerScore = 0;
+const computerScore = 0;
 function    computerPlay()  {
     return  computerGameSelection[Math.floor(Math.random()  *   computerGameSelection.length)];
 }
