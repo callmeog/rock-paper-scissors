@@ -1,59 +1,52 @@
-const   computerGameSelection   =   ['rock',    'paper',    'scissors'];
+const computerGameSelection = ['rock', 'paper', 'scissors'];
 const playerScore = 0;
 const computerScore = 0;
-function    computerPlay()  {
+function computerPlay()  {
     return  computerGameSelection[Math.floor(Math.random()  *   computerGameSelection.length)];
 }
 
 
 
-function    playRound(playerSelection,  computerSelection)  {
+function playRound(playerSelection, computerSelection)  {
     
-/*  let rock = /rock/i;
-    let paper = /paper/i;
-    let scissors = /scissors/i; 
-*/
-
-//    if(rock.test(playerSelection)) {
-        switch (true) {
-            case computerSelection == 'paper':
-                playerScore++
-                console.log(`computer: ${computerSelection} `);
-                break;
+    switch (true) {
+        case computerSelection == 'paper':
+            playerScore++
+            console.log(`computer: ${computerSelection} `);
+            break;
             
-            case computerSelection == 'rock':
-                computerScore++
-                console.log(`computer: ${computerSelection} `);
-                break;
+        case computerSelection == 'rock':
+            computerScore++
+            console.log(`computer: ${computerSelection} `);
+            break;
 
-            case computerSelection == 'scissors':
-                console.log(`computer: ${computerSelection}`);
-                break
+        case computerSelection == 'scissors':
+            console.log(`computer: ${computerSelection}`);
+            break
         }
      
-        switch (true) {
-            case playerSelection == 'rock':
+    switch (true) {
+        case playerSelection == 'rock':
             playerScore++
             console.log(`player: ${playerSelection}`);
             break;
 
-            case playerSelection == 'paper':
-                playerScore++
-                console.log(`player: ${playerSelection}`);
-                break;
+        case playerSelection == 'paper':
+            playerScore++
+            console.log(`player: ${playerSelection}`);
+            break;
             
-            case playerSelection == 'scissors':
-                console.log(`player: ${playerSelection}`);
-                break;
+        case playerSelection == 'scissors':
+            console.log(`player: ${playerSelection}`);
+            break;
         }
-
     }
 //}
 
 
 
-function    game()  {
-    for(let i = 0; i < 5; i++)    {
+function game()  {
+    for(let i = 0; i < 5; i++) {
         playRound(prompt('Play game'), computerPlay());
     }
     if(playerScore > computerScore) {
