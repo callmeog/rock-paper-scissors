@@ -1,0 +1,71 @@
+body {
+   text-align: center;
+   background: white;
+   color: white;
+   background-image: url("")
+ }
+ 
+ h1 {
+   margin: 1em;
+   color: orangered;
+ }
+ 
+ .main {
+   margin: 1em 10em;;
+   background: orangered;
+   padding: 1em;
+   border-radius: 5px;
+   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+ }
+ 
+ button {
+   padding: 10px 30px;
+   margin: 2em 1em;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 17px;
+   background: white;
+   border: none;
+   color: #0e1525;
+   font-weight: 700;
+ }
+ 
+ button:hover,focus {
+   box-shadow: 10px 6px 10px 5px rgba(0, 0, 0, 0.2);
+ }
+ 
+ #result {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 1em 0;
+   font-size: 20px;
+   font-weight: 900;
+ }
+ 
+ .score-board {
+   display: flex;
+   justify-content: center;
+   margin: 5em 0;
+ }
+ 
+ .container {
+   display: flex;
+   justify-content: center;
+ }
+ 
+ p {
+   margin: 0 2em;
+   font-size: 24px;
+   font-weight: 900;
+ }
+ 
+ .restart-btn {
+   margin-top: 8em;
+   background: darkgreen;
+   color: white;
+ }
+ 
+ .restart-btn:hover,focus {
+   background: green;
+ }

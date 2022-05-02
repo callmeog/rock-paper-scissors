@@ -1,14 +1,46 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Rock Paper Scissors</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatable" content="IE-EDGE">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css" type="text/css">
-        <script src="script.js"></script>
-    </head>
-    <body>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>R,P,S</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <h1>ROCK, PAPER, SCISSORS</h1>
+  
+  <div class="main">
+    <div id="object container">
+      <button id="rock" data-value="0">Rock</button>
+      <button id="paper" data-value="1">Paper</button>
+      <button id="scissors" data-value="2">Scissors</button>
+    </div>
+      <div id="result">--</div>
+
+
+    <!--counter board-->
+    <div class="score-board">
+      <p class="player-score">0</p>
+      <p>:</p>
+      <p class="computer-score">0</p>
+    </div>
+      
+      <!--player game played-->
+      <div class="container">
+        <div>
+          <p>Player</p>
+          <p class="player--game"></p>
+        </div>
         
-    </body>
+        <div>
+          <p>Computer</p>
+          <p class="computer--game"></p>
+        </div>
+      </div>
+    <button class="restart-btn">Restart</button>
+  </div>
+  
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>

@@ -1,60 +1,71 @@
-const computerGameSelection = ['rock', 'paper', 'scissors'];
-const playerScore = 0;
-const computerScore = 0;
-function computerPlay()  {
-    return  computerGameSelection[Math.floor(Math.random()  *   computerGameSelection.length)];
+const options = [  // 1
+  {selected: 'Rock', beatenBy: 'Paper'},
+  {selected: 'Paper', beatenBy: 'Scissors'},
+  {selected: 'Scissors', beatenBy: 'Sock'}
+];
+
+const result = textContent = document.querySelector('#result');
+const playerScore = document.querySelector('.player-score');
+const computerScore = document.querySelector('.computer-score');
+const playerGame = document.querySelector('.player--game');
+const computerGame = document.querySelector('.computer--game');
+
+function choice() {  // 6
+  return Math.floor(Math.random() * options.length);
 }
 
+let playerPoint = 0;
+let computerPoint = 0;
+let WINNING_SCORE = 5;
 
 
-function playRound(playerSelection, computerSelection)  {
+function playRound(player) {
+  let computer = choice();
+  let playerOption = options[player];     // 7
+  let computerOption = options[computer]; // 7
+  let textContent = "It's a tie";  // 8
+  
+
+  // 4 & 5
+  if (playerOption.beatenBy == computerOption.selected) {  // 1
+    computerPoint++;
+    computerScore.textContent = computerPoint;
+    textContent = `${computerOption.selected} beats ${playerOption.selected}`; // 8
+  } else if (computerOption.beatenBy == playerOption.selected) {  // 1
+    playerPoint++;
+    playerScore.textContent = playerPoint;
+    textContent = `${playerOption.selected} beats ${computerOption.selected}`; // 8
+  }
+  
+  //console.log({playerOption}, {computerOption});
+  result.textContent = textContent;
+  gameOver = '';
+if (checkWinningCondition(playerPoint, computerPoint, WINNING_SCORE)) {
+
+  if(playerPoint < WINNING_SCORE) {
+    result.textContent = 'Computer won, you lose!!!';
+  }else if(computerPoint < WINNING_SCORE) {
+   result.textContent = 'You won, computer lose!!!';
+  }
+}
+
+}
+
+function checkWinningCondition(playerPoint, computerPoint, WINNING_SCORE) {  // 9
+  return playerPoint >= WINNING_SCORE || computerPoint >= WINNING_SCORE;
+}
+
+const buttons = document.querySelectorAll('button'); 
+buttons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    let button = event.target;
+    let noWinner = !checkWinningCondition(playerPoint, computerPoint, WINNING_SCORE);   // 9, do note the ! which turns "false" to "true" and vice versa
     
-    switch (true) {
-        case computerSelection == 'paper':
-            playerScore++
-            console.log(`computer: ${computerSelection} `);
-            break;
-            
-        case computerSelection == 'rock':
-            computerScore++
-            console.log(`computer: ${computerSelection} `);
-            break;
-
-        case computerSelection == 'scissors':
-            console.log(`computer: ${computerSelection}`);
-            break
-        }
-     
-    switch (true) {
-        case playerSelection == 'rock':
-            playerScore++
-            console.log(`player: ${playerSelection}`);
-            break;
-
-        case playerSelection == 'paper':
-            playerScore++
-            console.log(`player: ${playerSelection}`);
-            break;
-            
-        case playerSelection == 'scissors':
-            console.log(`player: ${playerSelection}`);
-            break;
-        }
+    if (noWinner) { // 9
+      playRound(button.dataset.value); // 3
     }
-//}
+  })
+})
 
-
-
-function game()  {
-    for(let i = 0; i < 5; i++) {
-        playRound(prompt('Play game'), computerPlay());
-    }
-    if(playerScore > computerScore) {
-        alert('Congrats, you won the game')
-    }else if(playerScore < computerScore) {
-        alert(`Sorry, computer won`)
-    }else {
-        alert('Draw  nobody won')
-    }
-}
-game()
+const startBtn = document.querySelector('.restart-btn')
+startBtn.addEventListener('click',() => location.reload());
