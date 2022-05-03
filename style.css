@@ -94,11 +94,11 @@ span {
 a {
   margin: 0 7px;
   text-decoration: underline;
-  color: black;
+  color: grey;
 }
 
 a:hover,focus {
-  color: orangered;
+  color: black;
 }
 
 @media screen and (max-width: 1000px) {
