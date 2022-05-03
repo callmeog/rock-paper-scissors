@@ -58,6 +58,7 @@ p {
   margin: 0 2em;
   font-size: 24px;
   font-weight: 900;
+  font-family: sans-serif;
 }
  
 .restart-btn {
@@ -71,6 +72,25 @@ p {
   color: white;
 }
 
+footer {
+  bottom: 7px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  color: black;
+}
+
+
+a {
+  margin: 0 7px;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover,focus {
+  text-decoration: underline;
+  color: orangered;
+}
 
 @media screen and (max-width: 1000px) {
   .main {
