@@ -1,4 +1,4 @@
-## A basic Pock, Paper, Scissors
+# Rock, Paper, Scissors
 
 
 
