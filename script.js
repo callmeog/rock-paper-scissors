@@ -10,7 +10,7 @@ const computerScore = document.querySelector('.computer-score');
 const playerGame = document.querySelector('.player--game');
 const computerGame = document.querySelector('.computer--game');
 
-function choice() {  // 6
+function choice() {  
   return Math.floor(Math.random() * options.length);
 }
 
@@ -21,17 +21,16 @@ let WINNING_SCORE = 5;
 
 function playRound(player) {
   let computer = choice();
-  let playerOption = options[player];     // 7
-  let computerOption = options[computer]; // 7
-  let textContent = "It's a tie";  // 8
+  let playerOption = options[player];     
+  let computerOption = options[computer]; 
+  let textContent = "It's a tie"; 
   
 
-  // 4 & 5
-  if (playerOption.beatenBy == computerOption.selected) {  // 1
+  if (playerOption.beatenBy == computerOption.selected) {  
     computerPoint++;
     computerScore.textContent = computerPoint;
     textContent = `${computerOption.selected} beats ${playerOption.selected}`; // 8
-  } else if (computerOption.beatenBy == playerOption.selected) {  // 1
+  } else if (computerOption.beatenBy == playerOption.selected) { 
     playerPoint++;
     playerScore.textContent = playerPoint;
     textContent = `${playerOption.selected} beats ${computerOption.selected}`; // 8
@@ -61,8 +60,8 @@ buttons.forEach((button) => {
     let button = event.target;
     let noWinner = !checkWinningCondition(playerPoint, computerPoint, WINNING_SCORE);   // 9, do note the ! which turns "false" to "true" and vice versa
     
-    if (noWinner) { // 9
-      playRound(button.dataset.value); // 3
+    if (noWinner) {
+      playRound(button.dataset.value); 
     }
   })
 })
