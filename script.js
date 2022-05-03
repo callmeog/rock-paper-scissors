@@ -1,4 +1,4 @@
-const options = [  // 1
+const options = [  
   {selected: 'Rock', beatenBy: 'Paper'},
   {selected: 'Paper', beatenBy: 'Scissors'},
   {selected: 'Scissors', beatenBy: 'Sock'}
@@ -29,16 +29,16 @@ function playRound(player) {
   if (playerOption.beatenBy == computerOption.selected) {  
     computerPoint++;
     computerScore.textContent = computerPoint;
-    textContent = `${computerOption.selected} beats ${playerOption.selected}`; // 8
+    textContent = `${computerOption.selected} beats ${playerOption.selected}`; 
   } else if (computerOption.beatenBy == playerOption.selected) { 
     playerPoint++;
     playerScore.textContent = playerPoint;
-    textContent = `${playerOption.selected} beats ${computerOption.selected}`; // 8
+    textContent = `${playerOption.selected} beats ${computerOption.selected}`; 
   }
   
   //console.log({playerOption}, {computerOption});
   result.textContent = textContent;
-  gameOver = '';
+  
 if (checkWinningCondition(playerPoint, computerPoint, WINNING_SCORE)) {
 
   if(playerPoint < WINNING_SCORE) {
@@ -50,7 +50,7 @@ if (checkWinningCondition(playerPoint, computerPoint, WINNING_SCORE)) {
 
 }
 
-function checkWinningCondition(playerPoint, computerPoint, WINNING_SCORE) {  // 9
+function checkWinningCondition(playerPoint, computerPoint, WINNING_SCORE) {  
   return playerPoint >= WINNING_SCORE || computerPoint >= WINNING_SCORE;
 }
 
@@ -58,7 +58,7 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
   button.addEventListener('click', (event) => {
     let button = event.target;
-    let noWinner = !checkWinningCondition(playerPoint, computerPoint, WINNING_SCORE);   // 9, do note the ! which turns "false" to "true" and vice versa
+    let noWinner = !checkWinningCondition(playerPoint, computerPoint, WINNING_SCORE);   
     
     if (noWinner) {
       playRound(button.dataset.value); 
