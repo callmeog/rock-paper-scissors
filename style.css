@@ -73,22 +73,31 @@ p {
 }
 
 footer {
-  bottom: 7px;
+  bottom: 10px;
   left: 0;
   right: 0;
-  position: absolute;
-  color: black;
+  position: fixed;
+  color: grey;
+  font-family: sans-serif;
 }
 
+footer, p {
+  font-size: 16px;
+  font-weight: 100;
+  margin: 5px 0;
+}
+
+span {
+  font-size: 16px;
+}
 
 a {
   margin: 0 7px;
-  text-decoration: none;
+  text-decoration: underline;
   color: black;
 }
 
 a:hover,focus {
-  text-decoration: underline;
   color: orangered;
 }
 
