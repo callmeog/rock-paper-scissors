@@ -104,10 +104,16 @@ a:hover,focus {
 @media screen and (max-width: 1000px) {
   .main {
     margin: 2em 0;
+    height: 100vh;
   }
 
   button {
     padding: 15px 20px;
     margin: 2em .7em;
+  }
+
+  footer {
+    bottom: 0;
+    position: fixed;
   }
 }
